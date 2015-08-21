@@ -1,0 +1,28 @@
+
+div.CSS{
+	font-family: 'Lato', sans-serif;
+	color:#333333;
+	text-align: center;
+}
+div.entry{
+	width: 800px;
+	margin: auto;
+	text-align:justify;
+}
+h3{
+	margin:0;
+}
+hr.entry{
+	border-color:#E0E0E0;
+}
+p.date{
+	margin:0 0 10 0;
+	font-size:90%;
+}
+p.entry{
+	margin:0;
+}
+
+ul.entry{
+	margin:0;
+}
