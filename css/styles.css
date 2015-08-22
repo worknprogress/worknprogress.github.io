@@ -1,4 +1,10 @@
-
+h3{
+	margin:0;
+}
+table{
+	width: 800px;
+	height: 400px;
+}
 div.CSS{
 	font-family: 'Lato', sans-serif;
 	color:#333333;
@@ -8,9 +14,6 @@ div.entry{
 	width: 800px;
 	margin: auto;
 	text-align:justify;
-}
-h3{
-	margin:0;
 }
 hr.entry{
 	border-color:#E0E0E0;
@@ -25,4 +28,23 @@ p.entry{
 
 ul.entry{
 	margin:0;
+}
+#snorlax{
+	width:400px;
+}
+#topleft{
+	background-color: #f6e6bd;
+	width:200px;
+}
+#topright{
+	background-color: #e6c5ac;
+	width:200px;
+}
+#botleft{
+	background-color: #315a7b;
+	width:200px;
+}
+#botright{
+	background-color: #103941;
+	width:200px;
 }
