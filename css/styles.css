@@ -1,3 +1,14 @@
+body{
+	margin:0;
+}
+h1{	
+	position:fixed;
+	z-index: 9;
+	margin: auto;
+	width:100%;
+	background-color:#ffffff;
+	margin: 0;
+}
 h3{
 	margin:0;
 }
@@ -15,8 +26,20 @@ div.entry{
 	margin: auto;
 	text-align:justify;
 }
+div.spacer{
+	height:115px;
+	width: 100%;
+}
+hr.logo{
+	border-color:#E0E0E0;
+	margin:0;
+}
 hr.entry{
 	border-color:#E0E0E0;
+}
+img.logo{
+	height:100px;
+	margin:  5px;
 }
 p.date{
 	margin:0 0 10 0;
@@ -35,16 +58,20 @@ ul.entry{
 #topleft{
 	background-color: #f6e6bd;
 	width:200px;
+	height:200px;
 }
 #topright{
 	background-color: #e6c5ac;
 	width:200px;
+	height:200px;
 }
 #botleft{
 	background-color: #315a7b;
 	width:200px;
+	height:200px;
 }
 #botright{
 	background-color: #103941;
 	width:200px;
+	height:200px;
 }
