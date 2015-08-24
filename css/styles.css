@@ -17,7 +17,7 @@ table{
 	height: 400px;
 }
 div.CSS{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color:#333333;
 	text-align: center;
 }
@@ -25,6 +25,13 @@ div.entry{
 	width: 800px;
 	margin: auto;
 	text-align:justify;
+}
+div.liquidentry{
+	width: 50%;
+	margin: auto;
+	text-align:justify;
+	min-width: 450px;
+	max-width: 800px;
 }
 div.spacer{
 	height:115px;

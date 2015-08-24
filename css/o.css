@@ -1,0 +1,16 @@
+body{
+    height:100%;
+}
+.outside{
+    width:38%;
+    margin: auto;
+    float:left;
+    height:100%;
+}
+.inside{
+    width:62%;
+    background-color:orange;
+    margin:auto;
+    float:left;
+    text-align: center;
+}
