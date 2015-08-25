@@ -9,7 +9,7 @@ h1{
 	background-color:#ffffff;
 	margin: 0;
 }
-h3{
+h3,h4{
 	margin:0;
 }
 table{
@@ -26,6 +26,16 @@ div.entry{
 	margin: auto;
 	text-align:justify;
 }
+div.footer{
+	height:50px;
+	width:100%;
+}
+div.twocolliquidentry{
+	width: 62%;
+	margin: auto;
+	text-align:justify;
+    float:left;
+}
 div.liquidentry{
 	width: 50%;
 	margin: auto;
@@ -36,6 +46,11 @@ div.liquidentry{
 div.spacer{
 	height:115px;
 	width: 100%;
+}
+div.summary{
+	width:38%;
+	float:left;
+	text-align:left;
 }
 hr.logo{
 	border-color:#E0E0E0;
