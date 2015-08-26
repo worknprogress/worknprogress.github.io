@@ -1,5 +1,5 @@
 body{
-	margin:0;
+	padding: 10px;
 }
 h1{	
 	position:fixed;
@@ -31,13 +31,13 @@ div.footer{
 	width:100%;
 }
 div.twocolliquidentry{
-	width: 62%;
+	width: 58%;
 	margin: auto;
 	text-align:justify;
     float:left;
 }
 div.liquidentry{
-	width: 50%;
+	width: 63%;
 	margin: auto;
 	text-align:justify;
 	min-width: 450px;
@@ -47,10 +47,17 @@ div.spacer{
 	height:115px;
 	width: 100%;
 }
+div.splash{
+ 	width:100vw;
+    height:100vh;
+    display:table-cell;
+    vertical-align: middle;
+}
 div.summary{
-	width:38%;
+	width:30%;
 	float:left;
 	text-align:left;
+	margin-right:7%;
 }
 hr.logo{
 	border-color:#E0E0E0;

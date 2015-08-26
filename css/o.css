@@ -1,5 +1,12 @@
 body{
-    height:100%;
+    text-align:center;
+}
+.splash{
+    width:100vw;
+    height:100vh;
+    border:1px solid;
+    display:table-cell;
+    vertical-align: middle;
 }
 .outside{
     width:38%;
@@ -12,5 +19,4 @@ body{
     background-color:orange;
     margin:auto;
     float:left;
-    text-align: center;
 }
