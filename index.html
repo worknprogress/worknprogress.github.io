@@ -25,6 +25,56 @@
 	<div class="summary">
 		<h4>Upcoming</h4>
 			<ul class="entry">
+				<li>Functions in JavaScript</li>
+			</ul>
+	</div>
+	<div class="twocolliquidentry">
+		<h3>
+			Day 10: Exercises from Program Structure 
+		</h3>
+		<p class="date">Aug 30</p>
+		<p class="entry">
+		I'm going to use <a href="http://eloquentjavascript.net/">Eloquent JavaScript</a> to get more comfortable with JavaScript. I'll be posting my solutions to the exercises for each chapter along with some lessons learned when I wasn't able to achieve the ideal solution. 
+		<ul class="entry">
+			<li>Looping a triangle</li> 
+			<pre><code>for(var trig = '#'; trig.length < 8; trig = trig + '#')
+  console.log(trig);</code></pre>
+			<li>FizzBuzz</li> 
+			<pre><code>for(var count = 1; count <= 100; count++){
+ var out ="";
+ if(count % 3 == 0)
+   out +="Fizz";
+ if(count % 5 == 0)
+   out +="Buzz";
+ console.log(out || count);
+}
+</code></pre>
+		Lesson learned: The ideal approach is to let the output flow form each statement to statement, like what happens between case statements when there is no <code>break;</code> inbetween. This is in contrast to isolating each case(ie. if the input is divisible by 3 else if the input is divisible by 5 do this else if it is divible by 3 and 5 do this) which is not practical when there is a single output and the conditions to create it are not mutually exclusive
+		<br/>
+		<br/>
+			<li>Chess board</li> 
+			<pre><code>var size = 8;
+var out = "";
+for(var n = 1; n <= (size*size) + (size-1); n++){
+  if(n % (size+1) == 0){
+    out += "\n";
+    continue;
+  }
+  if(n % 2 == 1)
+    out += " ";
+  else
+    out += "#";
+}
+console.log(out);
+</code></pre>
+		Lesson learned: I'm a bit torn between the book's solution provided <a href="http://eloquentjavascript.net/code/#2.3">here</a> and the solution I presented above. From my understanding, a solution that works with one for loop has better performance than one that implements two. However, at first glance, the book's implementation gets the message across quicker. In the implementation I created, I realized that the output string length would be the size variable squared + an additional size-1 characters for the newline characters that are used for each row (it is size-1 because we don't want an additional newline on the last row). In the future, I'll be sure to look more closely at how the clarity of the code can be at times by traded off with performance. 
+		</ul>
+		</p>
+		<hr class="entry"/>
+	</div><!-- end of liquidentry -->
+	<div class="summary">
+		<h4>Upcoming</h4>
+			<ul class="entry">
 				<li>Learning JavaScript</li>
 			</ul>
 	</div>
@@ -40,11 +90,11 @@
 				<ul>
 					<li>Wasn't the best solution since I needed the div to be aware of the elements around it</li>
 				</ul>
-			<li> Setting the line-height 
+			<li> Setting the line-height </li>
 				<ul>
 					<li>Only good when the div size is known before hand, didn't fit with the goal of the page trying to be as fluid as possible </li>
 				</ul>
-			<li> Using relative positioning and transforms 
+			<li> Using relative positioning and transforms </li>
 				<ul>
 					<li>Not effective when the div takes up the screen</li>
 				</ul>
@@ -54,7 +104,7 @@
 				</ul>
 		</ul>
 		<br/>
-		I'm interested to see what the finalized versions of Flexbox and Grid Layout look like and see if they can provide a better solution to the one in place.
+		I'm interested to see what the finalized versions of Flexbox and Grid Layout look like and see if they can provide a better solution to the one in place
 		</p>
 		<hr class="entry"/>
 	</div><!-- end of liquidentry -->
