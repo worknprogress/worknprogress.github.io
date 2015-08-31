@@ -25,6 +25,59 @@
 	<div class="summary">
 		<h4>Upcoming</h4>
 			<ul class="entry">
+				<li>Data Structures: Objects and Arrays in JavaScript</li>
+			</ul>
+	</div>
+	<div class="twocolliquidentry">
+		<h3>
+			Day 11: Exercises from Chapter 3: Functions
+		</h3>
+		<p class="date">Aug 31</p>
+		<p class="entry">
+		<ul class="entry">
+			<li>Minimum</li> 
+			<pre><code>function min(a, b){
+  if(a < b)
+    return a;
+  else
+    return b;
+}</code></pre>
+			<li>Recursion</li> 
+			<pre><code>function isEven(a){
+  if(a == 0)
+    return true;
+  else if (a == 1)
+    return false;
+  else if (a < 0)
+    return isEven(-a);
+  else
+    return isEven(a-2);
+}</code></pre>
+		Lesson learned: originally, my solution went with adding 2 when a negative integer is passed, so at some point the argument becomes 0 or 1. Note that adding an even number to any integer doesn't change whether it was orignally odd or even. However, the solution above is much clearer and that is why I've gone with it.
+		<br/>
+		<br/>
+			<li>Bean counting</li> 
+			<pre><code>function countBs(input){
+  return countChar(input, "B");
+}
+
+function countChar(s, k){
+  var count = 0;
+  for(var l = 0; l < s.length; l++){
+    if(s.charAt(l) == k){
+      count++;
+    }
+  }
+  return count;
+}
+console.log(out);</code></pre>
+		</ul>
+		</p>
+		<hr class="entry"/>
+	</div><!-- end of liquidentry -->
+	<div class="summary">
+		<h4>Upcoming</h4>
+			<ul class="entry">
 				<li>Functions in JavaScript</li>
 			</ul>
 	</div>
