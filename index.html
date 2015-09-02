@@ -25,6 +25,122 @@
 	<div class="summary">
 		<h4>Upcoming</h4>
 			<ul class="entry">
+				<li>Higher Order Functions in JavaScript</li>
+			</ul>
+	</div>
+	<div class="twocolliquidentry">
+		<h3>
+			Day 12: Exercises from Chapter 4: Data Structures: Objects and Arrays part B
+		</h3>
+		<p class="date">Sept 2</p>
+		<p class="entry">
+		<ul class="entry">
+			<li>a List</li> 
+			<pre><code>function prepend(entry, list){
+return {value: entry, rest: list};
+}
+
+function arrayToList(array){
+  var list = null;
+  for(var i = array.length - 1; i >= 0; i--)
+    list = prepend(array[i], list);
+  return list;
+}
+
+function listToArray(list){
+  var array = [];
+  for(var node = list; node; node = node.rest)
+    array.push(node.value);
+  return array;
+}
+
+function nth(list, pos){
+  if(!list)
+    return undefined;
+  else if(pos == 0)
+    return list.value;
+  else
+    return nth(list.rest, pos-1);
+}
+</code></pre>
+			<li>Deep comparison</li> 
+			<pre><code>function deepEqual(a, b){
+  if (a === b)
+    return true;
+  if(typeof a != "object" || typeof b != "object" || a == null || b == null)
+    return false;
+
+  var propA = 0, propB = 0;
+  for (var prop in a)
+    propA++;
+  for(var prop in b){
+    propB++;
+    if(!(prop in a) || !deepEqual(a[prop], b[prop]))
+      return false;
+  }
+
+  return propA == propB;
+}</code></pre>
+		</ul>
+		</p>
+		<hr class="entry"/>
+	</div><!-- end of liquidentry -->
+	<div class="summary">
+		<h4>Upcoming</h4>
+			<ul class="entry">
+				<li>Data Structures: Objects and Arrays in JavaScript part B</li>
+			</ul>
+	</div>
+	<div class="twocolliquidentry">
+		<h3>
+			Day 12: Exercises from Chapter 4: Data Structures: Objects and Arrays part A
+		</h3>
+		<p class="date">Sept 1</p>
+		<p class="entry">
+		<ul class="entry">
+		There was a lot of material covered in this chapter so I'm going to go over it in two days to make sure I understand what is going on.
+			<li>The Sum of a Range</li> 
+			<pre><code>function range(start, end, step){
+  var result = [];
+  if(step == null) step = 1;
+  if (inc > 0)
+    for(var i = start; i <= end; i += step)
+      result.push(i);
+  else
+    for(var i = start; i >= end; i += step)
+      result.push(i);
+  return result;
+}
+
+function sum(array){
+  total = 0;
+  for(var i = 0; i < array.length; i++)
+    total += array[i];
+  return total;
+}</code></pre>
+			<li>Reversing an array</li> 
+			<pre><code>function reverseArray(array){
+  var reverse = [];
+  for(var i = array.length-1; i >= 0; i--){
+    reverse.push(array[i]);
+  }
+  return reverse;
+}
+
+function reverseArrayInPlace(array){
+  for(var i = array.length-1, count = 0; i != count; i--, count++){
+    var t = array[i];
+    array[i] = array[count];
+    array[count] = t;
+  }
+}</code></pre>
+		</ul>
+		</p>
+		<hr class="entry"/>
+	</div><!-- end of liquidentry -->
+	<div class="summary">
+		<h4>Upcoming</h4>
+			<ul class="entry">
 				<li>Data Structures: Objects and Arrays in JavaScript</li>
 			</ul>
 	</div>
