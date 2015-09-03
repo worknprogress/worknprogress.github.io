@@ -21,7 +21,70 @@
 	<div class="splash">
 		<h2>Work 'N Progress</h2>
 		Documenting my experiences learning HTML and CSS
+	</div>	
+	<div class="summary">
+		<h4>Upcoming</h4>
+			<ul class="entry">
+				<li>"The Secret Life of Objects" in JavaScript</li>
+			</ul>
 	</div>
+	<div class="twocolliquidentry">
+		<h3>
+			Day 14: Exercises from Chapter 5: Higher-Order Functions
+		</h3>
+		<p class="date">Sept 3</p>
+		<p class="entry">
+		<ul class="entry">
+			<li>Flattening</li> 
+			<pre><code>console.log(arrays.reduce(function(flat,curr) {
+  return flat.concat(curr);}
+));</code></pre>
+			<li>Mother-child age difference</li> 
+			<pre><code>function agediff(p) {
+ return p.born - byName[p.mother].born;
+}
+
+function mother(p) {return byName[p.mother];}
+
+console.log(average(ancestry.filter(mother).map(agediff)));</code></pre> 
+<li>Historical life expectancy</li> 
+			<pre><code>function groupBy(array, group){
+ var byGroup = {};
+ array.forEach(function(person){
+   if(group(person) in byGroup)
+   	byGroup[group(person)].push(person.died - person.born);
+   else
+    byGroup[group(person)] = [person.died-person.born];
+ }); 
+ return byGroup;
+}
+function century(person) {return Math.ceil(person.died /100);}
+
+var group = groupBy(ancestry,century);
+for(var cent in group){
+  console.log(cent + ": " + average(group[cent]));
+}</code></pre>
+<li>Every and then some</li> 
+			<pre><code>function every(array, test) {
+  for (var i = 0; i < array.length; i++) {
+  if (!test(array[i]))
+    return false;
+  }
+    return true;
+}
+
+function some(array, test){
+  var res = array.filter(test);
+    if(res.length > 0)
+      return true;
+  else
+      return false;
+}</code></pre>
+      Lessons learned: There are many approaches to solving this problem. The solutions in the text check at every iteration whether or not the input has met the test condition. In my original solution, I used <code>filter</code> to go through the entire input array before returning true or false. While this fits perfectly in the case of <code>some(array, test)</code> (since we only need one of the inputs to meet the test condition to return true), my approach isn't necessary in <code>every(array, test)</code> (since we can potentially return false after each input has been examined in the array). 
+		</ul>
+		</p>
+		<hr class="entry"/>
+	</div><!-- end of liquidentry -->
 	<div class="summary">
 		<h4>Upcoming</h4>
 			<ul class="entry">
