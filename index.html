@@ -22,6 +22,47 @@
 		<h2>Work 'N Progress</h2>
 		Documenting my experiences learning HTML and CSS
 	</div>
+	<div class="summary">
+		<h4>Upcoming</h4>
+			<ul class="entry">
+				<li>Regular Expressions</li>
+			</ul>
+	</div>
+	<div class="twocolliquidentry">
+		<h3>
+			Day 16 part 2: Exercises from Chapter 8: Bugs and Error Handling
+		</h3>
+		<p class="date">Sept 7</p>
+		<p class="entry">
+		<ul class="entry">
+			<li>Retry</li> 
+			<pre><code>function reliableMultiply(a, b) {
+for(;;){
+  try{
+    return primitiveMultiply(a,b);
+  } catch (e){
+    if (e instanceof MultiplicatorUnitFailure)
+      console.log("primitiveMultiply failed. Try again");
+    else
+      throw e;
+}}}</code></pre>
+			<li>The locked box</li>
+			<pre><code>function withBoxUnlocked(body) {
+  var locked = box.locked;
+  if(!locked)
+    return body;
+
+  box.unlock();
+  try{
+   return body();
+  }finally{
+    box.lock();
+  }
+}</code></pre>
+		</ul>
+		</p>
+		<hr class="entry"/>
+	</div><!-- end of liquidentry -->	
 		<div class="summary">
 		<h4>Upcoming</h4>
 			<ul class="entry">
