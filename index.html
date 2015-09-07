@@ -22,6 +22,50 @@
 		<h2>Work 'N Progress</h2>
 		Documenting my experiences learning HTML and CSS
 	</div>
+		<div class="summary">
+		<h4>Upcoming</h4>
+			<ul class="entry">
+				<li>Bugs and Error Handling</li>
+			</ul>
+	</div>
+	<div class="twocolliquidentry">
+		<h3>
+			Day 16: Exercises from Chapter 7: Project: Electronic Life in JavaScript
+		</h3>
+		<p class="date">Sept 7</p>
+		<p class="entry">
+		<ul class="entry">
+			<li>Artificial stupidity</li> 
+			<pre><code>function SmartPlantEater() {
+  this.energy = 20;
+  this.hunger  = 0;
+  this.direction = randomElement(directionNames);
+}
+
+SmartPlantEater.prototype.act = function(view) {
+  this.hunger += 5;
+  var plant = view.find("*");
+  if (view.look(this.direction) != " ")
+    this.direction = view.find(" ") || "s";
+  if (plant && (this.hunger >= 10)){
+    this.hunger = 0; 
+    return {type: "eat", direction: plant};
+  }    
+  if (this.energy > 80 && this.direction)
+    return {type: "reproduce", direction: this.direction};
+  if (this.direction){
+    return {type: "move", direction: this.direction};
+  }
+};</code></pre>
+Lesson learned: A way to preserve something after each function call is to store it as a property and have a test to see if the item being preserved is still correct. If it isn't update it accordingly.
+<br/>
+<br/>
+			<li>Predators</li>
+			Very similar to the above code, just need to replace plant with smartPlantEater.
+		</ul>
+		</p>
+		<hr class="entry"/>
+	</div><!-- end of liquidentry -->	
 	<div class="summary">
 		<h4>Upcoming</h4>
 			<ul class="entry">
