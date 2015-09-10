@@ -22,43 +22,32 @@
 		<h2>Work 'N Progress</h2>
 		Documenting my experiences learning HTML and CSS
 	</div>
-	<div class="summary">
+		<div class="summary">
 		<h4>Upcoming</h4>
 			<ul class="entry">
-				<li>Regular Expressions</li>
+				<li>Modules</li>
 			</ul>
 	</div>
 	<div class="twocolliquidentry">
 		<h3>
-			Day 16 part 2: Exercises from Chapter 8: Bugs and Error Handling
+			Day 17: Exercises from Chapter 9: Regular Expressions
 		</h3>
-		<p class="date">Sept 7</p>
+		<p class="date">Sept 9</p>
 		<p class="entry">
 		<ul class="entry">
-			<li>Retry</li> 
-			<pre><code>function reliableMultiply(a, b) {
-for(;;){
-  try{
-    return primitiveMultiply(a,b);
-  } catch (e){
-    if (e instanceof MultiplicatorUnitFailure)
-      console.log("primitiveMultiply failed. Try again");
-    else
-      throw e;
-}}}</code></pre>
-			<li>The locked box</li>
-			<pre><code>function withBoxUnlocked(body) {
-  var locked = box.locked;
-  if(!locked)
-    return body;
-
-  box.unlock();
-  try{
-   return body();
-  }finally{
-    box.lock();
-  }
-}</code></pre>
+			<li>Regexp golf</li> 
+			<pre><code>1. ca[rt]
+2. pr?op
+3. ferr(et|y|ari)
+4. ious\b
+5. \s[\.,:;]
+6. \w{7,}
+7. \b[a-df-z]+\b/i
+</code></pre>
+			<li>Quoting style</li> 
+			<pre><code>replace(/(^|\W)'|'(\W|$)/g, "$1\"$2")</code></pre>
+			<li>Numbers again</li> 
+			<pre><code>var number = /^[-+]?((\d+)[\.]?\d*([eE][-+]?\d+)?$|\.\d+$)/;</code></pre>
 		</ul>
 		</p>
 		<hr class="entry"/>
