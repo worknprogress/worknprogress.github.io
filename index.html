@@ -21,7 +21,57 @@
 	<div class="splash">
 		<h2>Work 'N Progress</h2>
 		Documenting my experiences learning HTML and CSS
-	</div><div class="summary">
+	</div>
+	<div class="summary">
+		<h4>Upcoming</h4>
+			<ul class="entry">
+				<li>The Document Object Model</li>
+			</ul>
+	</div>
+	<div class="twocolliquidentry">
+		<h3>
+			Day 19: Exercises from Chapter 11: Project: A Programming Language
+		</h3>
+		<p class="date">Oct 7</p>
+		<p class="entry">
+		<ul class="entry">
+			<li>Arrays</li> 
+			<pre><code>topEnv["array"] = function() {
+  return Array.prototype.slice.call(arguments, 0);
+};
+
+topEnv["length"] = function(array) {
+  return array.length;
+};
+
+topEnv["element"] = function(array, i) {
+  return array[i];
+};</code></pre>
+			<li>Comments</li> 
+			<pre><code>function skipSpace(string) {
+  var skippable = string.match(/^(\s|#.*)*/);
+  return string.slice(skippable[0].length);
+}</code></pre>
+			<li>Fixing Scope</li> 
+			<pre><code>specialForms["set"] = function(args, env) {
+  if (args.length != 2 || args[0].type != "word")
+    throw new SyntaxError("Bad use of set");
+  var varName = args[0].name;
+  var value = evaluate(args[1], env);
+
+  for (var scope = env; scope; scope = Object.getPrototypeOf(scope)) {
+    if (Object.prototype.hasOwnProperty.call(scope, varName)) {
+      scope[varName] = value;
+      return value;
+    }
+  }
+  throw new ReferenceError("Setting undefined variable " + varName);
+};</code></pre>
+		</ul>
+		</p>
+		<hr class="entry"/>
+	</div><!-- end of liquidentry -->
+	<div class="summary">
 		<h4>Upcoming</h4>
 			<ul class="entry">
 				<li>Project: "A Programming Language"</li>
