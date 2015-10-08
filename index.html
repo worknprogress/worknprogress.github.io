@@ -28,6 +28,84 @@
 				<li>The Document Object Model</li>
 			</ul>
 	</div>
+	
+	<div class="twocolliquidentry">
+<h3>
+			Day 20: Exercise from Chapter 13: The Document Object Model: Build a Table
+		</h3>
+		<p class="date">Oct 8</p>
+		<p class="entry">
+		Initial Implementation:
+			<pre><code>  function buildTable(data) {
+    var node = document.createElement("table");
+    Object.keys(data).forEach(
+      function HTMLtable(item) {
+        var header = Object.keys(data[item]);
+    node.appendChild(document.createElement("TR"));
+        if(node.childNodes.length == 1){
+          for(h in header){
+            var head = document.createElement("TH");
+            head.appendChild(document.createTextNode(header[h]));
+            node.appendChild(head);
+          }
+        }
+       else
+        for(h in header){
+     var cell = document.createElement("TD");
+          cell.textContent = (data[item][header[h]]);
+          node.appendChild(cell);
+          if(typeof data[item][header[h]] == "number"){
+            cell.style.textAlign = "right";
+          }
+        }
+      }
+    );
+    return node;
+  }
+  }</code></pre>
+		Improved Implementation:
+			<pre><code>function buildTable(data) { 
+  var table = document.createElement("table");
+    
+  var headings = Object.keys(data[0]);
+  var hRow = document.createElement("TR");
+  headings.forEach(function(field){     
+    var head = document.createElement("TH");
+    head.textContent = field;
+    hRow.appendChild(head);
+  });
+  table.appendChild(hRow);
+    
+  data.forEach(function(item){
+    var row = document.createElement("TR");
+    headings.forEach(function(data){
+      var cell = document.createElement("TD");
+      cell.textContent = item[data];
+      if(typeof item[data] == "number")
+        cell.style.textAlign = "right";
+      row.appendChild(cell);
+    });
+    table.appendChild(row);
+  });
+  return table;
+}</code></pre>
+  Things I could have done better:
+  <ul class="entry">
+  <li>make better use of Element.textContent, didn't need to create a textnode everytime for the contents of each element</li>
+  <li>better variable names</li>
+  <li>break apart the implementation into two loops as opposed to using one loop nested into another (didn't need to pile it into one loop since we need to go through the first entry twice: once for the headings (since the author tells us to assume that the data object will be an array of objects that all contain the same properties) and another for the actual data in that row)</li>
+  </ul>
+
+		</p>
+		<hr class="entry"/>
+	</div><!-- end of liquidentry -->
+	<div class="summary">
+		<h4>Upcoming</h4>
+			<ul class="entry">
+				<li>The Document Object Model</li>
+			</ul>
+	</div>
+
 	<div class="twocolliquidentry">
 		<h3>
 			Day 19: Exercises from Chapter 11: Project: A Programming Language
